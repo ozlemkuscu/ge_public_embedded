@@ -1,0 +1,306 @@
+{
+        "title": "Graffiti Exemption",
+        "v2": { "title": "Graffiti Exemption" },
+        "dateTimeFormat": "MM/DD/YYYY hh:mm a",
+        "dateFormat": "MM/DD/YYYY",
+        "dateFormatView": "YYYY/MM/DD h:mm a",
+        "timeFormat": "h:mm a",
+        "default_repo": "graffiti_exemption",
+        "formName": { "demo": "Graffiti Exemption Form" },
+        "timeOutMsg": "<br><br><p><strong>The session will time out after 15 minutes of inactivity, please save your work.</strong></p>",
+        "geoURL": "//map.toronto.ca/geoservices/rest/search/rankedsearch",
+        "geoParam": "&searchArea=1&matchType=1&projectionType=1&retRowLimit=10",
+        "pointerType": {
+            "title": "Pointer",
+            "choices": [{ "text": "Select one", "value": "" }]
+        },
+        "button": {
+            "submit": "Submit",
+            "edit": "Edit",
+            "submitPublic": "Submit Public",
+            "createNewEntry": "Create New",
+            "viewSubmissions": "View Submissions",
+            "print": "Print",
+            "viewEdit": "View / Edit",
+            "delete": "Delete",
+            "save": "Save",
+            "submitReport": "Submit"
+        },
+        "sameAsAbove": {
+            "title": "",
+            "choices": [{ "text": "Same As Above", "value": "Same As Above" }]
+        },
+        "choices": {
+            "yesNoFull": [{
+                "text": "Yes",
+                "value": "Yes"
+            }, {
+                "text": "No",
+                "value": "No"
+            }]
+        },
+        "httpHost": {
+            "rootPath": {
+                "local": "/",
+                "dev": "/webapps/work/decom/graffiti_exemption_staff/",
+                "qa": "/webapps/graffiti_exemption_staff/",
+                "prod": "/webapps/graffiti_exemption_staff/"
+            },
+            "rootPath_public": {
+                "local": "/",
+                "dev": "/webapps/work/decom/graffiti_exemption_public/",
+                "qa": "/webapps/graffiti_exemption_public/",
+                "prod": "/webapps/graffiti_exemption_public/"
+            },
+            "root": {
+                "local": "localhost",
+                "dev": "https://was-intra-sit.toronto.ca",
+                "qa": "https://was-intra-qa.toronto.ca",
+                "prod": "https://insideto-secure.toronto.ca"
+            },
+            "root_public": {
+                "local": "localhost",
+                "dev": "https://was-inter-sit.toronto.ca",
+                "qa": "https://was-inter-qa.toronto.ca",
+                "prod": "https://secure.toronto.ca"
+            },
+            "app": {
+                "local": "https://was-intra-sit.toronto.ca",
+                "dev": "https://was-intra-sit.toronto.ca",
+                "qa": "https://was-intra-qa.toronto.ca",
+                "prod": "https://insideto-secure.toronto.ca"
+            },
+            "app_public": {
+                "local": "https://was-inter-sit.toronto.ca",
+                "dev": "https://was-inter-sit.toronto.ca",
+                "qa": "https://was-inter-qa.toronto.ca",
+                "prod": "https://secure.toronto.ca"
+            },
+            "eventDispatcher": {
+                "dev": "http://cheetah-b4.corp.toronto.ca:5680",
+                "qa": "https://esb1qa.toronto.ca:5680",
+                "prod": "https://esb1.toronto.ca:5680"
+            }
+        },
+        "api": {
+            "get": "/cc_sr_admin_v1/retrieve/eventrepo/",
+            "post": "/cc_sr_admin_v1/submit/",
+            "put": "/cc_sr_admin_v1/submit/eventrepo/",
+            "delete": "/cc_sr_admin_v1/submit/eventrepo/",
+            "email": "/cc_sr_admin_v1/submit/graffiti_exemption_email",
+            "eventDispatcher": "/rest/COTEventDispatcher_V2/REST",
+            "upload": "/cc_sr_admin_v1/upload/",
+            "session": "/cc_sr_admin_v1/session/",
+            "timeout": 60
+        },
+        "api_public": {
+            "post": "/cc_sr_v1/submit/",
+            "upload": "/cc_sr_v1/upload/",
+            "email": "/cc_sr_v1/submit/graffiti_exemption_email"
+        },
+        "members": {
+            "app_g": "G",
+            "app_admin": "testweb1,MLS_user,MLS_admin,okuscu,bkiri,jcorrei,jmagalh",
+            "app_admin_list": ["testweb1", "MLS_user", "MLS_admin", "okuscu", "bkiri", "jcorrei", "jmagalh"]
+        },
+        "admin_emails": {
+            "dev": {
+                "Ozlem Kuscu": "ozlem.kuscu@toronto.ca"            },
+            "qa": {
+                "William She": "wshe@toronto.ca",
+                "Ozlem Kuscu": "ozlem.kuscu@toronto.ca"
+            },
+            "prod": {
+                "Ozlem Kuscu": "ozlem.kuscu@toronto.ca",
+                "Joy Correia": "Joy.Correia@toronto.ca"
+            }
+        },
+        "captain_emails": {
+            "dev": {},
+            "qa": {
+                "Ozlem Kuscu": "ozlem.kuscu@toronto.ca"
+            },
+            "prod": {
+                "Ozlem Kuscu": "ozlem.kuscu@toronto.ca",
+                "Joy Correia": "Joy.Correia@toronto.ca"
+            }
+        },
+        "recStatus": {
+            "title": "Status",
+            "choices": [
+                { "text": "New", "value": "New" },
+                { "text": "Review In Progress", "value": "Review In Progress" },
+                { "text": "Approved", "value": "Approved" },
+                { "text": "Denied", "value": "Denied" },
+                { "text": "Invalid Requests", "value": "Invalid Requests" }
+            ]
+        },
+        "messages": {
+            "current": "",
+            "load": {
+                "fail": "Unable to load! Report could not be retrieved. Please try again."
+            },
+            "save": {
+                "done": "Saved! This report was successfully saved.",
+                "fail": "Unable to save! This report could not be saved. Please try again."
+            },
+            "notify": {
+                "done": "Notified! This report was successfully sent to the Emergency Management Captain.",
+                "fail": "Unable to notify! This report could not be sent to the Emergency Management Captain. Please try again.",
+                "emailFrom": "wmDev@toronto.ca",
+                "emailSubject": "New Graffiti Exemption Document",
+                "emailBody": "New Graffiti Bylaw regularisation application has been received.",
+                "sendNotification": true
+            },
+            "submit": {
+                "done": "Thank you! Your request has been received.",
+                "fail": "Unable to submit! This report could not be submitted to the Administrator. Please try again."
+            },
+            "delete": {
+                "done": "Deleted! Report was successfully deleted.",
+                "fail": "Unable to delete! This report could not be deleted. Please try again."
+            },
+            "noSubmissionsFound": "No submissions found.",
+            "fadeOutTime": 8000
+        },
+        "auth": {
+            "login": "<h2>Session timeout! Please log in to access this application.</h2>",
+            "group": "<h2>Unauthorized! You don\"t have sufficient group permissions to view this application.</h2>"
+        },
+        "status": {
+            "Draft": "Yes",
+            "Submitted": "Submitted",
+            "Approved": "Approved",
+            "Deleted": "Deleted",
+            "Yes": "New",
+            "Denied": "Denied",
+            "Invalid": "Invalid",
+            "Search": "Global Search",
+            "All": "All",
+            "DraftApp": "New",
+            "YesApp": "New",
+            "SubmittedApp": "Review In Progress",
+            "ApprovedApp": "Approved",
+            "DeletedApp": "Deleted",
+            "DeniedApp": "Denied",
+            "InvalidApp": "Invalid Requests"
+        },
+        "modal": {
+            "confirmRemoveReport": "Are you sure you want to permanently remove this record?",
+            "confirmRemoveTitle": "Are you sure you want to remove this item from this application?"
+        },
+        "admin":
+        {
+            "docDropzonePublic": {
+                "acceptedFiles": "application/pdf,application/PDF,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "maxFiles": 3,
+                "dictDefaultMessage": "Drop files here or <button class='btn-link' aria-label='File Upload - Drop files here or click to upload' type='button'>select</button> to upload.",
+                "maxFilesize": 10,
+                "dictFileTooBig": "Maximum size for file attachment is 10 MB",
+                "addRemoveLinks": true,
+                "dictMaxFilesExceeded": "Maximum 3 uploaded file"
+            },
+            "docDropzoneStaff": {
+                "acceptedFiles": "application/pdf,application/PDF,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "maxFiles": 3,
+                "dictDefaultMessage": "Drop files here or <button class='btn-link' aria-label='File Upload - Drop files here or click to upload' type='button'>select</button> to upload.",
+                "maxFilesize": 10,
+                "dictFileTooBig": "Maximum size for file attachment is 10 MB",
+                "addRemoveLinks": true,
+                "dictMaxFilesExceeded": "Maximum 3 uploaded file"
+            },
+            "imageDropzonePublicTest": {
+                "acceptedFiles": "image/*",
+                "maxFiles": 1,
+                "dictDefaultMessage": "Drop files here or <button class='btn-link' aria-label='File Upload - Drop files here or click to upload' type='button'>select</button> to upload.",
+                "maxFilesize": 10,
+                "dictFileTooBig": "Maximum size for file attachment is 10 MB",
+                "addRemoveLinks": true,
+                "dictMaxFilesExceeded": "Maximum 3 uploaded file"
+            },
+            "imageDropzonePublic": {
+                "acceptedFiles": "image/*",
+                "maxFiles": 3,
+                "dictDefaultMessage": "Drop files here or <button class='btn-link' aria-label='File Upload - Drop files here or click to upload' type='button'>select</button> to upload.",
+                "maxFilesize": 10,
+                "dictFileTooBig": "Maximum size for file attachment is 10 MB",
+                "addRemoveLinks": true,
+                "dictMaxFilesExceeded": "Maximum 3 uploaded file"
+            },
+            "imageDropzoneStaff": {
+                "acceptedFiles": "image/*",
+                "maxFiles": 3,
+                "dictDefaultMessage": "Drop files here or <button class='btn-link' aria-label='File Upload - Drop files here or click to upload' type='button'>select</button> to upload.",
+                "maxFilesize": 10,
+                "dictFileTooBig": "Maximum size for file attachment is 10 MB",
+                "addRemoveLinks": true,
+                "dictMaxFilesExceeded": "Maximum 3 uploaded file"
+            }
+        },
+        "Same As Above": "Same As Above",
+        "imageValidation": "Please upload minimum one (1) image.",
+        "breadcrumbtrail": [{
+            "name": "Living In Toronto",
+            "link": "http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=38bebd6fe941a510VgnVCM10000071d60f89RCRD"
+        }, {
+            "name": "Transportation",
+            "link": "http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=e10086195a7c1410VgnVCM10000071d60f89RCRD"
+        }],
+        "View_Edit": "Open",
+        "Form Title": "Request for Regularization for Art Mural/Graffiti Art under Municipal Code Chapter 485, Graffiti",
+        "Admin Section": "Admin Section",
+        "Contact Details Section": "Contact Person",
+        "Profile Created": "Created",
+        "Submission Date Column": "Submission Date",
+        "Name": "Name",
+        "First Name": "First Name",
+        "Last Name": "Last Name",
+        "Address": "Address",
+        "City": "City",
+        "Postal Code": "Postal Code",
+        "Phone": "Phone",
+        "Fax": "Fax",
+        "Email": "Email",
+        "graffitiDesLocation": "Descriptive Location",
+        "Graffiti Section": "Mural/Graffiti Location",
+        "Graffiti Address": "Art Address",
+        "Graffiti City": "City",
+        "Graffiti Postal Code": "Postal Code",
+        "Graffiti Phone": "Phone",
+        "DescriptiveLocationText": "<p>(Specify North, East, West, South side of building, if the artwork is at ground level or higher, etc.)</p>",
+        "Facing Street": "Facing Street",
+        "Details Section": "Details About Art Mural/Graffiti Art",
+        "permission": "Have you provided permission for this art mural/graffiti art installation?",
+        "permissionValidation": "Permission information is required",
+        "notice": "Have you received a Notice of Violation?",
+        "noticeValidation": "Notice of Violation information is required",
+        "compliance": "When must your property be brought into compliance with the Bylaw?",
+        "complianceValidation": "Compliance Date information is required",
+        "maintenance": "Do you have a maintenance agreement with the artist?",
+        "maintenanceValidation": "Maintenance agreement information is required",
+        "agreementDetails": "If Yes, please provide details of your agreement:",
+        "agreementDetailsValidation": "Agreement Detail information is required",
+        "artistDetails": "Please provide information on the artist responsible for the art mural/graffiti art on your property.",
+        "artistDetailsValidation": "Artist information information is required",
+        "enhance": "How does this art mural/graffiti art enhance the surface it covers?",
+        "enhanceValidation": "Art mural/graffiti art enhance the surface information is required",
+        "adhere": "How does this art mural/graffiti art adhere to the local community character and standards?",
+        "adhereValidation": "Art mural/graffiti art adhere to the local community character and standards information is required",
+        "comments": "Additional Comments",
+        "AttachmentText": "Please provide good quality images of the entire piece of graffiti art that you are requesting regularization for. You may also choose to attach supporting documents for your application (for example, letters of support from Business Improvement Areas, Councillors, neighbours, a declaration from the artist etc.)",
+        "Attachments Section": "Attachments",
+        "Images": "Images",
+        "Documents": "Documents",
+        "ImagesText": "<strong>Images </strong>Limit of max three (3) images. Minimum one (1) image is required.",
+        "DocumentsText": "<strong>Documents </strong>Limit of max three (3) documents.",
+        "DeclarationText": "<strong>The personal information on this form is collected under the legal authority of the City of Toronto Act, 2006 s.136(c) and City of Toronto Municipal Code, Chapter 485, Graffiti.  The information will be used to locate and assess the location of the art mural/graffiti art noted in the application.  Questions about this collection can be directed to Project Lead, Graffiti Management Plan, 100 Queen Street West, 17th Floor East Tower, Toronto, Ontario M5H 2N2, 416-338-2951.</strong>",
+        "SubmitText": "Please review/print your information before submitting.  Once you click submit, you won't be able to edit/print.",
+        "Address Geo ID": "Geo ID",
+        "Address Longitude": "Address Longitude",
+        "Latitude": "Latitude",
+        "Map Address": "Test Map Link",
+        "ShowMap": "Show Map Link",
+        "PrintFormText": "Please print a copy of this form for your records and then click Submit.",
+        "ReviewText": "Please review your information before submitting. Once you click submit, you will not be able to edit.",
+        "uploadServerErrorMessage": "An issue has occured uploading the file to the server. Please try again. If the issue persists, please contact..."
+    }
