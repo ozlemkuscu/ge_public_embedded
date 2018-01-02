@@ -1,10 +1,10 @@
 {
         "title": "Graffiti Exemption",
         "v2": { "title": "Graffiti Exemption" },
-        "dateTimeFormat": "MM/DD/YYYY hh:mm a",
+        "dateTimeFormat": "MM/DD/YYYY HH:mm",
         "dateFormat": "MM/DD/YYYY",
-        "dateFormatView": "YYYY/MM/DD h:mm a",
-        "timeFormat": "h:mm a",
+        "dateFormatView": "YYYY/MM/DD HH:mm",
+        "timeFormat": "HH:mm",
         "default_repo": "graffiti_exemption",
         "formName": { "demo": "Graffiti Exemption Form" },
         "timeOutMsg": "<br><br><p><strong>The session will time out after 15 minutes of inactivity, please save your work.</strong></p>",
@@ -105,14 +105,13 @@
         },
         "admin_emails": {
             "dev": {
-                "Ozlem Kuscu": "ozlem.kuscu@toronto.ca"            },
+                "Ozlem Kuscu": "ozlem.kuscu@toronto.ca"            
+                },
             "qa": {
-                "William She": "wshe@toronto.ca",
                 "Ozlem Kuscu": "ozlem.kuscu@toronto.ca"
             },
             "prod": {
-                "Ozlem Kuscu": "ozlem.kuscu@toronto.ca",
-                "Joy Correia": "Joy.Correia@toronto.ca"
+                "Ozlem Kuscu": "ozlem.kuscu@toronto.ca"
             }
         },
         "captain_emails": {
@@ -121,8 +120,7 @@
                 "Ozlem Kuscu": "ozlem.kuscu@toronto.ca"
             },
             "prod": {
-                "Ozlem Kuscu": "ozlem.kuscu@toronto.ca",
-                "Joy Correia": "Joy.Correia@toronto.ca"
+                "Ozlem Kuscu": "ozlem.kuscu@toronto.ca"
             }
         },
         "recStatus": {
@@ -254,16 +252,21 @@
         "Submission Date Column": "Submission Date",
         "Name": "Name",
         "First Name": "First Name",
+        "eFirstNameValidation" : "First Name for Contact Person is required and cannot be left blank",
         "Last Name": "Last Name",
+        "eLastNameValidation": "Last Name for Contact Person is required and cannot be left blank",
         "Address": "Address",
+        "eAddressValidation": "Address for Contact Person is required and cannot be left blank",
         "City": "City",
         "Postal Code": "Postal Code",
         "Phone": "Phone",
+        "ePrimaryPhoneValidation": "Phone for Contact Person is required and cannot be left blank",
         "Fax": "Fax",
         "Email": "Email",
         "graffitiDesLocation": "Descriptive Location",
         "Graffiti Section": "Mural/Graffiti Location",
         "Graffiti Address": "Art Address",
+        "emAddressValidation":"Address for Mural/Graffiti Location is required and cannot be left blank",
         "Graffiti City": "City",
         "Graffiti Postal Code": "Postal Code",
         "Graffiti Phone": "Phone",

@@ -20,6 +20,7 @@ let fid = null;
 
 $(function () {
   httpHost = '/* @echo ENV*/';
+
   let cotApp = new CotApp();
 
   //@if ENV='local'
@@ -130,6 +131,11 @@ $(function () {
     // current core code doesn't recognize the validators, put (optional) word to the label 
     // if the required keyword is not set to true
     // manual fix for "optional" parameter on label for related fields
+    $("#eFirstNameElement .optional").first().text("");
+    $("#eLastNameElement .optional").first().text("");
+    $("#eAddressElement .optional").first().text("");
+    $("#ePrimaryPhoneElement .optional").first().text("");
+    $("#emAddressElement .optional").first().text("");
     $("#ePermissionElement .optional").first().text("");
     $("#eNoticeElement .optional").first().text("");
     $("#eMaintenanceElement .optional").first().text("");

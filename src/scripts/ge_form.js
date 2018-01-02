@@ -29,7 +29,7 @@ geForm = CotView.extend({
         let keepQueryString = checkFileUploads(uploads);
 
         $.ajax({
-          "url": config.httpHost.app_public[httpHost] + config.api_public.post + repo + '?sid=' + keepQueryString,
+          "url": config.httpHost.app_public[httpHost] + config.api_public.post + repo +'?'+keepQueryString,
           "type": 'POST',
           "data": JSON.stringify(payload),
           "headers": {
@@ -68,13 +68,43 @@ function getSubmissionSections() {
       rows: [
         {
           fields: [
-            { id: "eFirstName", "bindTo": "eFirstName", title: config["First Name"], className: "col-xs-12 col-md-6", required: true },
-            { id: "eLastName", "bindTo": "eLastName", title: config["Last Name"], className: "col-xs-12 col-md-6", required: true }
+            {
+              id: "eFirstName", "bindTo": "eFirstName", title: config["First Name"], className: "col-xs-12 col-md-6",
+              validators: {
+                callback: {
+                  message: config["eFirstNameValidation"],
+                  callback: function (value, validator, $field) {
+                    return ((value == "") ? false : true);
+                  }
+                }
+              }
+            },
+            {
+              id: "eLastName", "bindTo": "eLastName", title: config["Last Name"], className: "col-xs-12 col-md-6",
+              validators: {
+                callback: {
+                  message: config["eLastNameValidation"],
+                  callback: function (value, validator, $field) {
+                    return ((value == "") ? false : true);
+                  }
+                }
+              }
+            }
           ]
         },
         {
           fields: [
-            { id: "eAddress", "bindTo": "eAddress", title: config["Address"], className: "col-xs-12 col-md-6", required: true },
+            {
+              id: "eAddress", "bindTo": "eAddress", title: config["Address"], className: "col-xs-12 col-md-6",
+              validators: {
+                callback: {
+                  message: config["eAddressValidation"],
+                  callback: function (value, validator, $field) {
+                    return ((value == "") ? false : true);
+                  }
+                }
+              }
+            },
             { id: "eCity", "bindTo": "eCity", title: config["City"], value: "Toronto", className: "col-xs-12 col-md-6" }
           ]
         },
@@ -96,8 +126,17 @@ function getSubmissionSections() {
                 }
               }
             },
-
-            { id: "ePrimaryPhone", "bindTo": "ePrimaryPhone", title: config["Phone"], validationtype: "Phone", className: "col-xs-12 col-md-6", required: true }
+            {
+              id: "ePrimaryPhone", "bindTo": "ePrimaryPhone", title: config["Phone"], validationtype: "Phone", className: "col-xs-12 col-md-6",
+              validators: {
+                callback: {
+                  message: config["ePrimaryPhoneValidation"],
+                  callback: function (value, validator, $field) {
+                    return ((value == "") ? false : true);
+                  }
+                }
+              }
+            }
           ]
         }, {
           fields: [
@@ -119,7 +158,17 @@ function getSubmissionSections() {
         },
         {
           fields: [
-            { id: "emAddress", "bindTo": "emAddress", title: config["Address"], className: "col-xs-12 col-md-6", required: true },
+            {
+              id: "emAddress", "bindTo": "emAddress", title: config["Address"], className: "col-xs-12 col-md-6",
+              validators: {
+                callback: {
+                  message: config["emAddressValidation"],
+                  callback: function (value, validator, $field) {
+                    return ((value == "") ? false : true);
+                  }
+                }
+              }
+            },
             { id: "emCity", "bindTo": "emCity", title: config["City"], value: "Toronto", className: "col-xs-12 col-md-6" }
           ]
         },
@@ -341,7 +390,7 @@ function checkFileUploads(uploads) {
     })
   }
 
-  if (binLoc != "") { queryString = "&keepFiles=" + binLoc };
+  if (binLoc != "") { queryString = "keepFiles=" + binLoc };
 
   return queryString;
 }
